@@ -1,0 +1,43 @@
+
+@mixin medium-screen {
+    @media (min-width: $mobile-media ) {
+        @content;
+    }
+}
+
+
+@mixin large-screen {
+  @media (min-width: $tablet-media ) {
+      @content;
+  }
+}
+
+ @mixin gradient-color {
+  background: linear-gradient(175deg, $secondary-color , $primary-color);
+ }
+
+@mixin padding-top-bottom ($p) {
+    padding-top: $p;
+    padding-bottom: $p;
+}
+
+%flex {
+    display: flex;
+    align-items: center;
+}
+
+%flex-start {
+    @extend %flex;
+    justify-content: flex-start;
+
+}
+
+%flex-center {
+    @extend %flex;
+    justify-content: center;
+}
+
+%flex-between {
+  @extend %flex;
+  justify-content: space-between;
+}
