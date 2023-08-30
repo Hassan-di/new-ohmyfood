@@ -1,9 +1,9 @@
 @import './../utils/variables';
-@import "./../Base/global";
+@import "./../base/global";
 @import './../utils/mixins-placeholders';
-@import './../Components/button';
-@import "./../Layout/header";
-@import "./../Layout/footer";
+@import './../components/button';
+@import "./../layout/header";
+@import "./../layout/footer";
 
 main {
   img {
@@ -44,12 +44,28 @@ main {
     }
     & > div{
       margin-bottom: 35px;
+
+      &:not(:first-of-type){
+/* */
+      @include medium-screen {
+        opacity: 0;
+        animation: fade-translate 2s linear infinite;
+        @for $i from 0 to 3{
+          &:nth-of-type(#{$i + 1}){
+            animation-delay: calc( $i * .5s );
+          }
+        }
+      }
     }
+      /* */
+
+    }
+  
     h4.special-heading {
       font-weight: normal;
-      color: $text-color;
       text-transform: uppercase;
       position: relative;
+      
 
       &::after {
         content: "";
@@ -61,8 +77,11 @@ main {
         background-color: $tertiary-color;
       }
     }
+
     .content {
+      
       a {
+       
         display: block;
         width: 100%;
         background-color: $backround-gray;
@@ -75,12 +94,20 @@ main {
         padding-right: 27px;
         overflow: hidden;
         position: relative;
-        animation:  2s ease forwards fade-translate;
-        @for $i from 0 to 3{
-          &:nth-child(#{$i}){
-            animation-delay: $i * calc(1s / 30);
+        
+         @include small-screen {
+
+          opacity: 0;
+          animation: fade-translate 2s linear infinite;
+          @for $i from 0 to 3{
+            &:nth-of-type(#{$i + 1}){
+              animation-delay: calc( $i * .5s );
+            }
           }
+
         }
+
+       
 
         h4 {
           margin: 0 0 8px;
@@ -119,8 +146,7 @@ main {
           width: 0px;
           height: 100%;
           background-color: $tertiary-color;
-
-          animation: 1s ease forwards show;
+          animation: 1s linear forwards shows;
         }
         &:hover::before {
           font: var(--fa-font-solid);
@@ -157,6 +183,9 @@ main {
       }
     }
 
+
+   }
+ 
     button.order{
       outline: none;
       border: 0;
@@ -172,13 +201,13 @@ main {
           margin-left: 30px;
         }
       }
-      h4.special-heading::after{
-        left: 47%;
-      }
-      text-align: center;
+       text-align: center;
+       h4.special-heading{ /**/
+        text-align: left;/**/
+       }/**/
+     
     }
   }
-}
 
 @keyframes move-left {
   100%{
@@ -186,7 +215,7 @@ main {
   }
 }
 
-@keyframes show {
+@keyframes shows {
   100% {
     width: 60px;
   }
@@ -199,18 +228,24 @@ main {
   }
 }
 
+// /بداية تغغير/ 
 @keyframes fade-translate {
   0%{
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(10px);
+
   }
-  50%{
-    opacity: .5;
-    transform: translateY(0px);
-  }
-  100%{
+  30%{
     opacity: 1;
     transform: translateY(0px);
 
   }
+  
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+
+
+  }
 }
+// نهاية تغيير

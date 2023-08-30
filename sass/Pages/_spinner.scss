@@ -1,5 +1,3 @@
-$p : false;
-
 .wrapper {
   width: 100%;
   height: 100vh;
@@ -7,23 +5,25 @@ $p : false;
   top: 0;
   left: 0;
   z-index: 1000;
-  @extend %flex-center;
+  display: flex;
+  /**/
+  justify-content: center;
+  /**/
+  align-items: center;
+  /**/
   background-color: #e2e2e2;
-  // @if($p){
-  //   &{
-      display: none;
-  //   }
-  // }
+  animation: hider 0ms 3s forwards;
 
   .wave {
     width: 5px;
     height: 100px;
     margin: 10px;
     border-radius: 5px;
-    @include gradient-color();
-
+    background-color: #9356DC;
+    /**/
     animation: wave 2s linear forwards;
-  
+    
+
 
     @for $i from 1 to 10 {
       &:nth-child(#{$i}) {
@@ -32,15 +32,24 @@ $p : false;
     }
   }
 }
+
 @keyframes wave {
   0% {
     transform: scale(0);
   }
+
   50% {
     transform: scale(1);
   }
+
   100% {
     transform: scale(0);
-    $p : true;
+
+  }
+}
+
+@keyframes hider {
+  100% {
+    transform: scale(0);
   }
 }

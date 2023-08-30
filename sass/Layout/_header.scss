@@ -1,4 +1,4 @@
-// @import '_mixins-placeholders.scss';
+@import '../utils/variables';
 // start header
 header {
     height: $head-height;
@@ -14,7 +14,7 @@ header {
 
         a.back {
             position: relative;
-            left: -65px;
+            left: -20%;/**/
         }
 
         a img {
@@ -22,8 +22,6 @@ header {
         }
 
     }
-
-
 }
 
 .location {

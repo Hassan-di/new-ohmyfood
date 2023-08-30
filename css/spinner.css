@@ -1,0 +1,59 @@
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex; /**/
+  justify-content: center; /**/
+  align-items: center; /**/
+  background-color: #e2e2e2;
+}
+.wrapper .wave {
+  width: 5px;
+  height: 100px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #9356DC; /**/
+  animation: wave 2s linear forwards;
+}
+.wrapper .wave:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.wrapper .wave:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.wrapper .wave:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.wrapper .wave:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.wrapper .wave:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.wrapper .wave:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.wrapper .wave:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.wrapper .wave:nth-child(8) {
+  animation-delay: 0.8s;
+}
+.wrapper .wave:nth-child(9) {
+  animation-delay: 0.9s;
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}/*# sourceMappingURL=spinner.css.map */

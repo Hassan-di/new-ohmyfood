@@ -1,10 +1,15 @@
 
-@mixin medium-screen {
-    @media (min-width: $mobile-media ) {
+@mixin small-screen {
+    @media (max-width: $mobile-media ) {
         @content;
     }
 }
 
+@mixin medium-screen {
+  @media (min-width: $mobile-media ) {
+      @content;
+  }
+}
 
 @mixin large-screen {
   @media (min-width: $tablet-media ) {
