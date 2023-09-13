@@ -67,7 +67,6 @@ body img {
   /**/
   background-color: #e2e2e2;
   animation: hider 0ms 3s forwards;
-  bottom: 0;
 }
 .wrapper .wave {
   width: 5px;
@@ -336,7 +335,7 @@ main .container a {
   position: relative;
   box-shadow: 0 3px 13px 3px #dfdfdf;
 }
-.restaurants .container .content a.card::before {
+.restaurants .container .content a.card:nth-child(1)::before, .restaurants .container .content a.card:nth-child(2)::before { /*updated new*/
   content: "New";
   position: absolute;
   top: 15px;
@@ -345,7 +344,6 @@ main .container a {
   font-size: 14px;
   background-color: #99E2D0;
   padding: 6px 26px;
-  color: #00873d;
   border-radius: 3px;
 }
 .restaurants .container .content a.card img {
@@ -355,21 +353,27 @@ main .container a {
   object-position: bottom;
 }
 .restaurants .container .content a.card:nth-child(2) img {
-  object-position: center 60%;
+  object-position: center 61%;
 }
 .restaurants .container .content a.card .info {
   background-color: #fff;
   padding: 10px;
+  position: relative;
 }
 .restaurants .container .content a.card .info h3 {
   margin: 0;
 }
-.restaurants .container .content a.card .info h3 div i.fa-regular {
+.restaurants .container .content a.card .info .favorite-heart {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+.restaurants .container .content a.card .info .favorite-heart i.fa-regular {
   position: relative;
   display: block;
   top: 10px;
 }
-.restaurants .container .content a.card .info h3 div i.fa-solid {
+.restaurants .container .content a.card .info .favorite-heart i.fa-solid {
   position: relative;
   top: 0;
   left: 0;
@@ -382,10 +386,10 @@ main .container a {
   -webkit-text-fill-color: transparent;
   transition: opacity 2s linear;
 }
-.restaurants .container .content a.card .info h3 div:hover i.fa-regular {
+.restaurants .container .content a.card .info .favorite-heart:hover i.fa-regular {
   display: none;
 }
-.restaurants .container .content a.card .info h3 div:hover i.fa-solid {
+.restaurants .container .content a.card .info .favorite-heart:hover i.fa-solid {
   animation: 1s linear forwards graduate-heart;
 }
 .restaurants .container .content a.card p {

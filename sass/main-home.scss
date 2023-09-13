@@ -113,9 +113,9 @@ main {
         flex-wrap: wrap;
 
         li {
-         flex-basis: 32%;
+          flex-basis: 32%;
           min-width: 300px;
-          
+
           &:nth-child(2) {
             margin-left: 2%;
             margin-right: 2%;
@@ -123,6 +123,7 @@ main {
         }
       }
     }
+
     @include medium-screen {
       text-align: center;
     }
@@ -145,8 +146,9 @@ main {
         margin-bottom: 16px;
         position: relative;
         box-shadow: $box-shadow;
-
-        &::before {
+        &:nth-child(1)::before,/*updated new*/
+        &:nth-child(2)::before{/*updated new*/
+      
           content: "New";
           position: absolute;
           top: 15px;
@@ -155,7 +157,7 @@ main {
           font-size: 14px;
           background-color: $tertiary-color;
           padding: 6px 26px;
-          color: #00873d;
+         
           border-radius: 3px;
         }
 
@@ -165,118 +167,138 @@ main {
           object-fit: cover;
           object-position: bottom;
         }
+
         &:nth-child(2) {
           img {
-            object-position: center 60%;
+            object-position: center 61%;
+           
+
           }
         }
+
         .info {
           background-color: $white;
           padding: 10px;
+          position: relative;
 
           h3 {
             margin: 0;
             @extend %flex-between;
 
-             div{
-                // بدايه من الجزء
-            i.fa-regular{
+
+
+            // نهاية جزء تغييرات
+          }
+
+          .favorite-heart {
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+            
+
+            // بدايه من الجزء
+            i.fa-regular {
               position: relative;
               display: block;
               top: 10px;
             }
-              
-              i.fa-solid{
-                position: relative;
-                top: 0;
-                left: 0;
-                right: 0;
-                opacity: 0;
-                z-index: -1;
-                background: #fff;
-                -webkit-background-clip: text;
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-                transition: opacity 2s linear;
-              
-              }
 
-              &:hover i.fa-regular{
-                display: none;
-              }
-              &:hover i.fa-solid{
-                animation: 1s linear forwards graduate-heart;
-                  
-                }
-              }
-                // نهاية جزء تغييرات
+            i.fa-solid {
+              position: relative;
+              top: 0;
+              left: 0;
+              right: 0;
+              opacity: 0;
+              z-index: -1;
+              background: #fff;
+              -webkit-background-clip: text;
+              background-clip: text;
+              -webkit-text-fill-color: transparent;
+              transition: opacity 2s linear;
+
+            }
+
+            &:hover i.fa-regular {
+              display: none;
+            }
+
+            &:hover i.fa-solid {
+              animation: 1s linear forwards graduate-heart;
+
             }
           }
-          p {
-            margin: 5px 0px;
-            color: $text-color;
-          }
         }
-      }
-    }
-    @include medium-screen {
-      h2 {
-        text-align: center;
-      }
-      .content {
-        display: flex;
-        flex-wrap: wrap;
-        flex-grow: 1;
-        justify-content: center;
-        gap: 32px;
 
-        .card {
-          flex-basis: 348px;
-          min-width: 300px;
-
-          img {
-            height: 230px;
-          }
-        }
-      }
-    }
-
-    @include large-screen {
-      .content {
-        display: flex;
-        justify-content: center;
-        gap: 32px;
-
-        .card {
-          flex-basis: 450px;
-
-          img {
-            height: 260px;
-          }
+        p {
+          margin: 5px 0px;
+          color: $text-color;
         }
       }
     }
   }
+
+  @include medium-screen {
+    h2 {
+      text-align: center;
+    }
+
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      justify-content: center;
+      gap: 32px;
+
+      .card {
+        flex-basis: 348px;
+        min-width: 300px;
+
+        img {
+          height: 230px;
+        }
+      }
+    }
+  }
+
+  @include large-screen {
+    .content {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+
+      .card {
+        flex-basis: 450px;
+
+        img {
+          height: 260px;
+        }
+      }
+    }
+  }
+}
+
 // End section Restaurants
 
 
-@keyframes graduate-heart{
+@keyframes graduate-heart {
   0% {
-      display: inline;
-      background-image: linear-gradient(175deg, #FF79DA 20%, #fff 80%);
-      opacity: 1;
-      z-index: 10;
-  }
-  20% {
     display: inline;
-    background-image: linear-gradient(175deg, #9356DC 30%, #FF79DA );
+    background-image: linear-gradient(175deg, #FF79DA 20%, #fff 80%);
     opacity: 1;
     z-index: 10;
-}
+  }
+
+  20% {
+    display: inline;
+    background-image: linear-gradient(175deg, #9356DC 30%, #FF79DA);
+    opacity: 1;
+    z-index: 10;
+  }
+
   100% {
-   display: inline;
-  background-image: linear-gradient(175deg, #9356DC, #FF79DA);
-  opacity: 1;
-  z-index: 10;
+    display: inline;
+    background-image: linear-gradient(175deg, #9356DC, #FF79DA);
+    opacity: 1;
+    z-index: 10;
   }
 }

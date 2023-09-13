@@ -181,7 +181,7 @@ main img {
 @media (min-width: 768px) {
   .menu .container > div:not(:first-of-type) {
     opacity: 0;
-    animation: fade-translate 2s linear infinite;
+    animation: fade-translate 3s linear forwards;
   }
   .menu .container > div:not(:first-of-type):nth-of-type(1) {
     animation-delay: 0s;
@@ -220,11 +220,13 @@ main img {
   padding-right: 27px;
   overflow: hidden;
   position: relative;
+  transition: all 1s linear;
+  /*aded new*/
 }
 @media (max-width: 768px) {
   .menu .container .content a {
     opacity: 0;
-    animation: fade-translate 2s linear infinite;
+    animation: fade-translate 2s linear forwards;
   }
   .menu .container .content a:nth-of-type(1) {
     animation-delay: 0s;
@@ -267,7 +269,8 @@ main img {
   width: 0px;
   height: 100%;
   background-color: #99E2D0;
-  animation: 1s linear forwards shows;
+  width: 60px;
+  /*added new*/
 }
 .menu .container .content a:hover::before {
   font: var(--fa-font-solid);
@@ -315,8 +318,10 @@ main img {
   .menu h2 i {
     margin-left: 30px;
   }
-  .menu h4.special-heading { /**/
-    text-align: left; /**/
+  .menu h4.special-heading {
+    /**/
+    text-align: left;
+    /**/
   }
 }
 
@@ -325,11 +330,7 @@ main img {
     margin-right: 60px;
   }
 }
-@keyframes shows {
-  100% {
-    width: 60px;
-  }
-}
+/*removed new*/
 @keyframes rotate {
   100% {
     right: 20px;

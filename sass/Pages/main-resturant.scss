@@ -12,12 +12,14 @@ main {
     max-height: 280px;
 
   }
+
   @include medium-screen {
-    img{
+    img {
       max-height: 500px;
     }
   }
 }
+
 // start menu section
 .menu {
   background-color: $backround-gray;
@@ -29,7 +31,7 @@ main {
   @include padding-top-bottom(30px);
 
   .container {
-    .restaurant-name{
+    .restaurant-name {
       @extend %flex-between;
 
       h2 {
@@ -37,35 +39,40 @@ main {
         font-size: 28px;
         margin: 0;
       }
-      i{
+
+      i {
         transform: scaleY(1.3);
         font-weight: 100 !important;
       }
     }
-    & > div{
+
+    &>div {
       margin-bottom: 35px;
 
-      &:not(:first-of-type){
-/* */
-      @include medium-screen {
-        opacity: 0;
-        animation: fade-translate 2s linear infinite;
-        @for $i from 0 to 3{
-          &:nth-of-type(#{$i + 1}){
-            animation-delay: calc( $i * .5s );
+      &:not(:first-of-type) {
+
+        /* */
+        @include medium-screen {
+          opacity: 0;
+          animation: fade-translate 3s linear forwards;
+
+          @for $i from 0 to 3 {
+            &:nth-of-type(#{$i + 1}) {
+              animation-delay: calc($i * .5s);
+            }
           }
         }
       }
-    }
+
       /* */
 
     }
-  
+
     h4.special-heading {
       font-weight: normal;
       text-transform: uppercase;
       position: relative;
-      
+
 
       &::after {
         content: "";
@@ -79,9 +86,9 @@ main {
     }
 
     .content {
-      
+
       a {
-       
+
         display: block;
         width: 100%;
         background-color: $backround-gray;
@@ -94,26 +101,29 @@ main {
         padding-right: 27px;
         overflow: hidden;
         position: relative;
-        
-         @include small-screen {
+        transition: all 1s linear;
+
+        /*aded new*/
+        @include small-screen {
 
           opacity: 0;
-          animation: fade-translate 2s linear infinite;
-          @for $i from 0 to 3{
-            &:nth-of-type(#{$i + 1}){
-              animation-delay: calc( $i * .5s );
+          animation: fade-translate 2s linear forwards;
+
+          @for $i from 0 to 3 {
+            &:nth-of-type(#{$i + 1}) {
+              animation-delay: calc($i * .5s);
             }
           }
 
         }
 
-       
+
 
         h4 {
           margin: 0 0 8px;
           font-size: 17px;
         }
-
+// check mark
         p {
           font-weight: normal;
           font-size: 14px;
@@ -125,7 +135,7 @@ main {
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
-            }
+          }
 
           span.cost {
             margin-left: 30px;
@@ -134,7 +144,8 @@ main {
           }
         }
 
-        &:hover p{
+        // check mark
+        &:hover p {
           animation: 1s ease forwards move-left;
         }
 
@@ -146,8 +157,12 @@ main {
           width: 0px;
           height: 100%;
           background-color: $tertiary-color;
-          animation: 1s linear forwards shows;
+          // FIXME
+          // animation: 1s linear forwards shows;/*removed new*/
+          width: 60px;
+          /*added new*/
         }
+
         &:hover::before {
           font: var(--fa-font-solid);
           content: "\f058";
@@ -171,55 +186,64 @@ main {
 
         a {
           flex-basis: 32%;
-          
+
           &:nth-child(even) {
             margin-left: 2%;
             margin-right: 2%;
           }
 
-         
+
         }
-        
+
       }
     }
 
 
-   }
- 
-    button.order{
-      outline: none;
-      border: 0;
-      width: 180px;
-      padding: 14px;
-      margin: 40px auto 50px;
-    }
-    @include medium-screen {
-      h2{
-        display: block;
-
-        i{
-          margin-left: 30px;
-        }
-      }
-       text-align: center;
-       h4.special-heading{ /**/
-        text-align: left;/**/
-       }/**/
-     
-    }
   }
 
+  button.order {
+    outline: none;
+    border: 0;
+    width: 180px;
+    padding: 14px;
+    margin: 40px auto 50px;
+  }
+
+  @include medium-screen {
+    h2 {
+      display: block;
+
+      i {
+        margin-left: 30px;
+      }
+    }
+
+    text-align: center;
+
+    h4.special-heading {
+      /**/
+      text-align: left;
+      /**/
+    }
+
+    /**/
+
+  }
+}
+
 @keyframes move-left {
-  100%{
+  100% {
     margin-right: 60px;
   }
 }
 
-@keyframes shows {
-  100% {
-    width: 60px;
-  }
-}
+/*removed new*/
+// @keyframes shows {
+//   100% {
+//     width: 60px;
+//   }
+
+// }
 
 @keyframes rotate {
   100% {
@@ -230,22 +254,24 @@ main {
 
 // /بداية تغغير/ 
 @keyframes fade-translate {
-  0%{
+  0% {
     opacity: 0;
     transform: translateY(10px);
 
   }
-  30%{
+
+  30% {
     opacity: 1;
     transform: translateY(0px);
 
   }
-  
-  100%{
+
+  100% {
     opacity: 1;
     transform: translateY(0px);
 
 
   }
 }
+
 // نهاية تغيير

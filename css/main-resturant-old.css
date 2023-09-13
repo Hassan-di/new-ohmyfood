@@ -208,9 +208,6 @@ main img {
   margin-bottom: 35px;
 }
 
-.menu .container>div:not(:first-of-type) {
-}
-
 @media (min-width: 768px) {
   .menu .container>div:not(:first-of-type) {
     opacity: 0;
