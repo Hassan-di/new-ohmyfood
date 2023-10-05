@@ -292,6 +292,9 @@ main .container a {
   font-weight: normal;
   font-size: 14px;
 }
+.how-works .container ol li:nth-child(3) {
+  background-color: #f1eafc;
+}
 .how-works .container ol li:hover {
   background-color: #f1eafc;
 }
@@ -335,7 +338,8 @@ main .container a {
   position: relative;
   box-shadow: 0 3px 13px 3px #dfdfdf;
 }
-.restaurants .container .content a.card:nth-child(1)::before, .restaurants .container .content a.card:nth-child(2)::before { /*updated new*/
+.restaurants .container .content a.card:nth-child(1)::before, .restaurants .container .content a.card:nth-child(2)::before {
+  /*updated new*/
   content: "New";
   position: absolute;
   top: 15px;

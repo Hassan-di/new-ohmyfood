@@ -98,6 +98,10 @@ main {
           font-size: 14px;
         }
 
+        &:nth-child(3) {
+          background-color: #f1eafc;
+        }
+
         &:hover {
           background-color: #f1eafc;
 
@@ -146,9 +150,12 @@ main {
         margin-bottom: 16px;
         position: relative;
         box-shadow: $box-shadow;
-        &:nth-child(1)::before,/*updated new*/
-        &:nth-child(2)::before{/*updated new*/
-      
+
+        &:nth-child(1)::before,
+        /*updated new*/
+        &:nth-child(2)::before {
+          /*updated new*/
+
           content: "New";
           position: absolute;
           top: 15px;
@@ -157,7 +164,7 @@ main {
           font-size: 14px;
           background-color: $tertiary-color;
           padding: 6px 26px;
-         
+
           border-radius: 3px;
         }
 
@@ -171,7 +178,7 @@ main {
         &:nth-child(2) {
           img {
             object-position: center 61%;
-           
+
 
           }
         }
@@ -194,7 +201,7 @@ main {
             position: absolute;
             right: 30px;
             bottom: 30px;
-            
+
 
             // بدايه من الجزء
             i.fa-regular {
