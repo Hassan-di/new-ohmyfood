@@ -1,0 +1,575 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+}
+body a {
+  text-decoration: none;
+}
+body a, body a:hover, body a:active {
+  color: #000;
+}
+body .container {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+body img {
+  max-width: 100%;
+}
+
+.restaurants .container .content a.card .info h3, .how-works .container ol, .location .container, header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.how-works .container ol, .location .container, header .container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.restaurants .container .content a.card .info h3 {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.button, main .container a {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 20px auto;
+  padding: 16px 26px;
+  border-radius: 40px;
+  color: #fff;
+  opacity: 0.9;
+  -webkit-filter: drop-shadow(4PX 4PX 4PX #ccc);
+          filter: drop-shadow(4PX 4PX 4PX #ccc);
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
+}
+.button:hover, main .container a:hover {
+  color: #fff;
+  -webkit-filter: brightness(1.1) opacity(0.85) drop-shadow(0px 2px 6px #888);
+          filter: brightness(1.1) opacity(0.85) drop-shadow(0px 2px 6px #888); /**/
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /**/
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /**/
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /**/
+  background-color: #e2e2e2;
+  -webkit-animation: hider 0ms 3s forwards;
+          animation: hider 0ms 3s forwards;
+}
+.wrapper .wave {
+  width: 5px;
+  height: 100px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #9356DC;
+  /**/
+  -webkit-animation: wave 2s linear forwards;
+          animation: wave 2s linear forwards;
+}
+.wrapper .wave:nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+.wrapper .wave:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.wrapper .wave:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.wrapper .wave:nth-child(4) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.wrapper .wave:nth-child(5) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.wrapper .wave:nth-child(6) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.wrapper .wave:nth-child(7) {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+.wrapper .wave:nth-child(8) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+.wrapper .wave:nth-child(9) {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+@-webkit-keyframes wave {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes wave {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+@-webkit-keyframes hider {
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+@keyframes hider {
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+header {
+  height: 62px;
+  border-bottom: 2px solid #d7d7d7;
+  padding: 20px 0 16px;
+}
+@media (min-width: 768px) {
+  header {
+    height: 70px;
+  }
+}
+header .container a.back {
+  position: relative;
+  left: -20%; /**/
+}
+header .container a img {
+  width: 165px;
+}
+
+.location {
+  height: 50px;
+  background-color: #e6e6e6;
+}
+.location .container {
+  height: 100%;
+  font-size: 18px;
+}
+.location .container i {
+  position: relative;
+  left: -24px;
+}
+
+main {
+  background-color: #f4f4f4;
+}
+main .container {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+main .container h2 {
+  font-size: 22px;
+}
+main .container p {
+  padding: 20px 0;
+  color: #777;
+  font-size: 18px;
+}
+main .container a {
+  margin-bottom: 20px;
+}
+main img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 500px;
+}
+
+footer {
+  background-color: #333;
+}
+footer .container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+footer .container h3 {
+  margin-top: 0;
+}
+footer .container a img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  width: 100px;
+}
+footer .container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+footer .container div a {
+  color: #fff;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+footer .container div a i {
+  margin-right: 8px;
+}
+@media (min-width: 768px) {
+  footer .container div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.location {
+  height: 50px;
+  background-color: #e7e7e7;
+}
+.location .container {
+  height: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  color: #444;
+}
+.location .container i {
+  position: relative;
+  left: -18px;
+  color: #444;
+}
+
+main {
+  background-color: #f4f4f4;
+}
+main .container {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+main .container h2 {
+  font-size: 22px;
+}
+main .container p {
+  padding: 20px 0;
+  color: #555;
+  font-size: 18px;
+}
+main .container a {
+  margin-bottom: 20px;
+}
+
+.how-works {
+  background-color: #fff;
+}
+.how-works .container {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+.how-works .container ol {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  counter-reset: count;
+  padding-left: 12px;
+}
+.how-works .container ol li {
+  width: 100%;
+  list-style-type: none;
+  position: relative;
+  background-color: #f4f4f4;
+  border-radius: 27px;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  -webkit-box-shadow: 0 3px 13px 3px #dfdfdf;
+          box-shadow: 0 3px 13px 3px #dfdfdf;
+  font-weight: bold;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  padding-right: 27px;
+}
+.how-works .container ol li i {
+  margin-left: 36px;
+  margin-right: 15px;
+  font-size: 20px;
+  color: #777;
+}
+.how-works .container ol li:before {
+  counter-increment: count;
+  content: counter(count) " ";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 4px 8px;
+  border-radius: 50%;
+  color: #fff;
+  background: #9356DC;
+  font-weight: normal;
+  font-size: 14px;
+}
+.how-works .container ol li:nth-child(3) {
+  background-color: #f1eafc;
+}
+.how-works .container ol li:hover {
+  background-color: #f1eafc;
+}
+.how-works .container ol li:hover i {
+  color: #9356DC;
+}
+@media (min-width: 768px) {
+  .how-works .container ol {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .how-works .container ol li {
+    -ms-flex-preferred-size: 32%;
+        flex-basis: 32%;
+    min-width: 300px;
+  }
+  .how-works .container ol li:nth-child(2) {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+@media (min-width: 768px) {
+  .how-works .container {
+    text-align: center;
+  }
+}
+
+.restaurants {
+  background-color: #f4f4f4;
+}
+.restaurants .container {
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.restaurants .container .content a.card {
+  display: block;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  position: relative;
+  -webkit-box-shadow: 0 3px 13px 3px #dfdfdf;
+          box-shadow: 0 3px 13px 3px #dfdfdf;
+}
+.restaurants .container .content a.card:nth-child(1)::before, .restaurants .container .content a.card:nth-child(2)::before {
+  /*updated new*/
+  content: "New";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+  font-size: 14px;
+  background-color: #99E2D0;
+  padding: 6px 26px;
+  border-radius: 3px;
+}
+.restaurants .container .content a.card img {
+  width: 100%;
+  height: 175px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+.restaurants .container .content a.card:nth-child(2) img {
+  -o-object-position: center 61%;
+     object-position: center 61%;
+}
+.restaurants .container .content a.card .info {
+  background-color: #fff;
+  padding: 10px;
+  position: relative;
+}
+.restaurants .container .content a.card .info h3 {
+  margin: 0;
+}
+.restaurants .container .content a.card .info .favorite-heart {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+.restaurants .container .content a.card .info .favorite-heart i.fa-regular {
+  position: relative;
+  display: block;
+  top: 10px;
+}
+.restaurants .container .content a.card .info .favorite-heart i.fa-solid {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  z-index: -1;
+  background: #fff;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transition: opacity 2s linear;
+  transition: opacity 2s linear;
+}
+.restaurants .container .content a.card .info .favorite-heart:hover i.fa-regular {
+  display: none;
+}
+.restaurants .container .content a.card .info .favorite-heart:hover i.fa-solid {
+  -webkit-animation: 1s linear forwards graduate-heart;
+          animation: 1s linear forwards graduate-heart;
+}
+.restaurants .container .content a.card p {
+  margin: 5px 0px;
+  color: #555;
+}
+@media (min-width: 768px) {
+  .restaurants h2 {
+    text-align: center;
+  }
+  .restaurants .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 32px;
+  }
+  .restaurants .content .card {
+    -ms-flex-preferred-size: 348px;
+        flex-basis: 348px;
+    min-width: 300px;
+  }
+  .restaurants .content .card img {
+    height: 230px;
+  }
+}
+@media (min-width: 991px) {
+  .restaurants .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 32px;
+  }
+  .restaurants .content .card {
+    -ms-flex-preferred-size: 450px;
+        flex-basis: 450px;
+  }
+  .restaurants .content .card img {
+    height: 260px;
+  }
+}
+
+@-webkit-keyframes graduate-heart {
+  0% {
+    display: inline;
+    background-image: linear-gradient(175deg, #FF79DA 20%, #fff 80%);
+    opacity: 1;
+    z-index: 10;
+  }
+  20% {
+    display: inline;
+    background-image: linear-gradient(175deg, #9356DC 30%, #FF79DA);
+    opacity: 1;
+    z-index: 10;
+  }
+  100% {
+    display: inline;
+    background-image: linear-gradient(175deg, #9356DC, #FF79DA);
+    opacity: 1;
+    z-index: 10;
+  }
+}
+
+@keyframes graduate-heart {
+  0% {
+    display: inline;
+    background-image: linear-gradient(175deg, #FF79DA 20%, #fff 80%);
+    opacity: 1;
+    z-index: 10;
+  }
+  20% {
+    display: inline;
+    background-image: linear-gradient(175deg, #9356DC 30%, #FF79DA);
+    opacity: 1;
+    z-index: 10;
+  }
+  100% {
+    display: inline;
+    background-image: linear-gradient(175deg, #9356DC, #FF79DA);
+    opacity: 1;
+    z-index: 10;
+  }
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3Nhc3MvYmFzZS9fZ2xvYmFsLnNjc3MiLCIuLi9tYWluLWhvbWUuY3NzIiwiLi4vLi4vc2Fzcy91dGlscy9fbWl4aW5zLXBsYWNlaG9sZGVycy5zY3NzIiwiLi4vLi4vc2Fzcy9jb21wb25lbnRzL19idXR0b24uc2NzcyIsIi4uLy4uL3Nhc3MvdXRpbHMvX3ZhcmlhYmxlcy5zY3NzIiwiLi4vLi4vc2Fzcy9wYWdlcy9fc3Bpbm5lci5zY3NzIiwiLi4vLi4vc2Fzcy9sYXlvdXQvX2hlYWRlci5zY3NzIiwiLi4vLi4vc2Fzcy9sYXlvdXQvX2Zvb3Rlci5zY3NzIiwiLi4vLi4vc2Fzcy9tYWluLWhvbWUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUVFLDhCQUFBO0VBQ0Esc0JBQUE7QUNDRjs7QURHQTtFQUNFLHFCQUFBO0FDQUY7QURDRTtFQUNFLHFCQUFBO0FDQ0o7QURDSTtFQUdFLFdBQUE7QUNETjtBREtFO0VBQ0Usa0JBQUE7RUFDQSxtQkFBQTtFQUNBLGlCQUFBO0VBQ0Esa0JBQUE7QUNISjtBREtFO0VBQ0UsZUFBQTtBQ0hKOztBQ0tBO0VBQ0ksb0JBQUE7RUFBQSxvQkFBQTtFQUFBLGFBQUE7RUFDQSx5QkFBQTtNQUFBLHNCQUFBO1VBQUEsbUJBQUE7QURGSjs7QUNXQTtFQUVJLHdCQUFBO01BQUEscUJBQUE7VUFBQSx1QkFBQTtBRFRKOztBQ1lBO0VBRUUseUJBQUE7TUFBQSxzQkFBQTtVQUFBLDhCQUFBO0FEVkY7O0FFcENBO0VBQ0UsY0FBQTtFQUNBLDBCQUFBO0VBQUEsdUJBQUE7RUFBQSxrQkFBQTtFQUNBLGlCQUFBO0VBQ0Esa0JBQUE7RUFDQSxtQkFBQTtFQUNBLFdDSUs7RURITCxZQUFBO0VBQ0EsNkNBQUE7VUFBQSxxQ0FBQTtFRFlBLHFEQUFBO0FENEJGO0FFckNFO0VBQ0ksV0NGQztFREdELDJFQUFBO1VBQUEsbUVBQUEsRUFBQSxHQUFBO0FGdUNOOztBSXBEQTtFQUNFLFdBQUE7RUFDQSxhQUFBO0VBQ0EsZUFBQTtFQUNBLE1BQUE7RUFDQSxPQUFBO0VBQ0EsYUFBQTtFQUNBLG9CQUFBO0VBQUEsb0JBQUE7RUFBQSxhQUFBO0VBQ0EsR0FBQTtFQUNBLHdCQUFBO01BQUEscUJBQUE7VUFBQSx1QkFBQTtFQUNBLEdBQUE7RUFDQSx5QkFBQTtNQUFBLHNCQUFBO1VBQUEsbUJBQUE7RUFDQSxHQUFBO0VBQ0EseUJBQUE7RUFDQSx3Q0FBQTtVQUFBLGdDQUFBO0FKdURGO0FJckRFO0VBQ0UsVUFBQTtFQUNBLGFBQUE7RUFDQSxZQUFBO0VBQ0Esa0JBQUE7RUFDQSx5QkFBQTtFQUNBLEdBQUE7RUFDQSwwQ0FBQTtVQUFBLGtDQUFBO0FKdURKO0FJbERNO0VBQ0UsNkJBQUE7VUFBQSxxQkFBQTtBSm9EUjtBSXJETTtFQUNFLDZCQUFBO1VBQUEscUJBQUE7QUp1RFI7QUl4RE07RUFDRSw2QkFBQTtVQUFBLHFCQUFBO0FKMERSO0FJM0RNO0VBQ0UsNkJBQUE7VUFBQSxxQkFBQTtBSjZEUjtBSTlETTtFQUNFLDZCQUFBO1VBQUEscUJBQUE7QUpnRVI7QUlqRU07RUFDRSw2QkFBQTtVQUFBLHFCQUFBO0FKbUVSO0FJcEVNO0VBQ0UsNkJBQUE7VUFBQSxxQkFBQTtBSnNFUjtBSXZFTTtFQUNFLDZCQUFBO1VBQUEscUJBQUE7QUp5RVI7QUkxRU07RUFDRSw2QkFBQTtVQUFBLHFCQUFBO0FKNEVSOztBSXRFQTtFQUNFO0lBQ0UsMkJBQUE7WUFBQSxtQkFBQTtFSnlFRjtFSXRFQTtJQUNFLDJCQUFBO1lBQUEsbUJBQUE7RUp3RUY7RUlyRUE7SUFDRSwyQkFBQTtZQUFBLG1CQUFBO0VKdUVGO0FBQ0Y7O0FJbEZBO0VBQ0U7SUFDRSwyQkFBQTtZQUFBLG1CQUFBO0VKeUVGO0VJdEVBO0lBQ0UsMkJBQUE7WUFBQSxtQkFBQTtFSndFRjtFSXJFQTtJQUNFLDJCQUFBO1lBQUEsbUJBQUE7RUp1RUY7QUFDRjtBSW5FQTtFQUNFO0lBQ0UsMkJBQUE7WUFBQSxtQkFBQTtFSnFFRjtBQUNGO0FJeEVBO0VBQ0U7SUFDRSwyQkFBQTtZQUFBLG1CQUFBO0VKcUVGO0FBQ0Y7QUt4SEE7RUFDSSxZRkRVO0VFRVYsZ0NBQUE7RUFDQSxvQkFBQTtBTDBISjtBQ3ZIRTtFSU5GO0lBTVEsWUFBQTtFTDJITjtBQUNGO0FLdEhRO0VBQ0ksa0JBQUE7RUFDQSxVQUFBLEVBQUEsR0FBQTtBTHdIWjtBS3JIUTtFQUNJLFlBQUE7QUx1SFo7O0FLakhBO0VBQ0ksWUFBQTtFQUNBLHlCQUFBO0FMb0hKO0FLbEhJO0VBRUksWUFBQTtFQUNBLGVGN0JFO0FIZ0pWO0FLakhRO0VBQ0ksa0JBQUE7RUFDQSxXQUFBO0FMbUhaOztBSzlHQTtFQUNJLHlCRnRDYTtBSHVKakI7QUsvR0k7RUFDSSxrQkFBQTtFSnRCSixpQkl1QmdDO0VKdEJoQyxvQklzQmdDO0FMa0hwQztBS2hIUTtFQUNJLGVBQUE7QUxrSFo7QUsvR1E7RUFDSSxlQUFBO0VBQ0EsV0FBQTtFQUNBLGVGcERGO0FIcUtWO0FLOUdRO0VBRUksbUJBQUE7QUwrR1o7QUszR0k7RUFDSSxXQUFBO0VBQ0Esb0JBQUE7S0FBQSxpQkFBQTtFQUNBLGlCQUFBO0FMNkdSOztBTS9LQTtFQUNFLHNCQUFBO0FOa0xGO0FNaExFO0VMbUJFLGlCS2xCNEI7RUxtQjVCLG9CS25CNEI7QU5tTGhDO0FNbExJO0VBQ0UsYUFBQTtBTm9MTjtBTWpMTTtFQUNFLHlCQUFBO1VBQUEsaUJBQUE7RUFDQSxZQUFBO0FObUxSO0FNL0tJO0VBQ0Usb0JBQUE7RUFBQSxvQkFBQTtFQUFBLGFBQUE7RUFDQSw0QkFBQTtFQUFBLDZCQUFBO01BQUEsMEJBQUE7VUFBQSxzQkFBQTtBTmlMTjtBTS9LTTtFQUNFLFdIWkQ7RUdhQyxxQkFBQTtFQUNBLG1CQUFBO0FOaUxSO0FNaExRO0VBQ0UsaUJBQUE7QU5rTFY7QUNwTUU7RUtTRTtJQWFJLDhCQUFBO0lBQUEsNkJBQUE7UUFBQSx1QkFBQTtZQUFBLG1CQUFBO0lBQ0EseUJBQUE7UUFBQSxzQkFBQTtZQUFBLDhCQUFBO0VOa0xOO0FBQ0Y7O0FPeE1BO0VBQ0UsWUFBQTtFQUNBLHlCQUFBO0FQMk1GO0FPek1FO0VBRUUsWUFBQTtFQUNBLGVBQUE7RUFDQSxpQkFBQTtFQUNBLFdBQUE7QVAwTUo7QU94TUk7RUFDRSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxXQUFBO0FQME1OOztBT3JNQTtFQUNFLHlCSnpCZTtBSGlPakI7QU90TUU7RUFDRSxrQkFBQTtFTlRBLGlCTVU0QjtFTlQ1QixvQk1TNEI7QVB5TWhDO0FPdk1JO0VBQ0UsZUFBQTtBUHlNTjtBT3RNSTtFQUNFLGVBQUE7RUFDQSxXSmpDTztFSWtDUCxlSnZDSTtBSCtPVjtBT3JNSTtFQUVFLG1CQUFBO0FQc01OOztBT2pNQTtFQUNFLHNCSjVDSztBSGdQUDtBT2xNRTtFTmhDRSxpQk1pQzRCO0VOaEM1QixvQk1nQzRCO0FQcU1oQztBT25NSTtFQUVFLDRCQUFBO0VBQUEsNkJBQUE7TUFBQSwwQkFBQTtVQUFBLHNCQUFBO0VBQ0Esb0JBQUE7RUFDQSxrQkFBQTtBUG9NTjtBT2xNTTtFQUNFLFdBQUE7RUFDQSxxQkFBQTtFQUNBLGtCQUFBO0VBQ0EseUJKaEVTO0VJaUVULG1CQUFBO0VBQ0EsbUJBQUE7RUFDQSxnQkFBQTtFQUNBLDBDSjlESTtVSThESixrQ0o5REk7RUkrREosaUJBQUE7RU5sREosaUJNbURnQztFTmxEaEMsb0JNa0RnQztFQUM1QixtQkFBQTtBUHFNUjtBT25NUTtFQUNFLGlCQUFBO0VBQ0Esa0JBQUE7RUFDQSxlQUFBO0VBQ0EsV0FBQTtBUHFNVjtBT2xNUTtFQUNFLHdCQUFBO0VBQ0EsMkJBQUE7RUFDQSxrQkFBQTtFQUNBLE9BQUE7RUFDQSxRQUFBO0VBQ0Esd0NBQUE7TUFBQSxvQ0FBQTtVQUFBLGdDQUFBO0VBQ0EsZ0JBQUE7RUFDQSxrQkFBQTtFQUNBLFdKcEZIO0VJcUZHLG1CSnhGTTtFSXlGTixtQkFBQTtFQUNBLGVBQUE7QVBvTVY7QU9qTVE7RUFDRSx5QkFBQTtBUG1NVjtBT2hNUTtFQUNFLHlCQUFBO0FQa01WO0FPaE1VO0VBQ0UsY0pyR0k7QUh1U2hCO0FDdFNFO0VNbURFO0lBdURJLDhCQUFBO0lBQUEsNkJBQUE7UUFBQSx1QkFBQTtZQUFBLG1CQUFBO0lBQ0Esd0JBQUE7UUFBQSxxQkFBQTtZQUFBLHVCQUFBO0lBQ0EsbUJBQUE7UUFBQSxlQUFBO0VQZ01OO0VPOUxNO0lBQ0UsNEJBQUE7UUFBQSxlQUFBO0lBQ0EsZ0JBQUE7RVBnTVI7RU85TFE7SUFDRSxlQUFBO0lBQ0EsZ0JBQUE7RVBnTVY7QUFDRjtBQ3JURTtFTWdEQTtJQTJFSSxrQkFBQTtFUDhMSjtBQUNGOztBT3pMQTtFQUNFLHlCSnJJZTtBSGlVakI7QU8xTEU7RU5wSEUsaUJNcUg0QjtFTnBINUIsb0JNb0g0QjtBUDZMaEM7QU8xTE07RUFDRSxjQUFBO0VBQ0Esc0JKeElEO0VJeUlDLG1CQUFBO0VBQ0EsZ0JBQUE7RUFDQSxtQkFBQTtFQUNBLGtCQUFBO0VBQ0EsMENKNUlJO1VJNElKLGtDSjVJSTtBSHdVWjtBTzFMUTtFQUdFLGNBQUE7RUFFQSxjQUFBO0VBQ0Esa0JBQUE7RUFDQSxTQUFBO0VBQ0EsV0FBQTtFQUNBLFdBQUE7RUFDQSxlQUFBO0VBQ0EseUJKNUpNO0VJNkpOLGlCQUFBO0VBRUEsa0JBQUE7QVB3TFY7QU9yTFE7RUFDRSxXQUFBO0VBQ0EsYUFBQTtFQUNBLG9CQUFBO0tBQUEsaUJBQUE7RUFDQSwwQkFBQTtLQUFBLHVCQUFBO0FQdUxWO0FPbkxVO0VBQ0UsOEJBQUE7S0FBQSwyQkFBQTtBUHFMWjtBTy9LUTtFQUNFLHNCSmhMSDtFSWlMRyxhQUFBO0VBQ0Esa0JBQUE7QVBpTFY7QU8vS1U7RUFDRSxTQUFBO0FQaUxaO0FPektVO0VBQ0Usa0JBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtBUDJLWjtBT3ZLWTtFQUNFLGtCQUFBO0VBQ0EsY0FBQTtFQUNBLFNBQUE7QVB5S2Q7QU90S1k7RUFDRSxrQkFBQTtFQUNBLE1BQUE7RUFDQSxPQUFBO0VBQ0EsUUFBQTtFQUNBLFVBQUE7RUFDQSxXQUFBO0VBQ0EsZ0JBQUE7RUFDQSw2QkFBQTtFQUNBLHFCQUFBO0VBQ0Esb0NBQUE7RUFDQSxxQ0FBQTtFQUFBLDZCQUFBO0FQd0tkO0FPcEtZO0VBQ0UsYUFBQTtBUHNLZDtBT25LWTtFQUNFLG9EQUFBO1VBQUEsNENBQUE7QVBxS2Q7QU8vSlE7RUFDRSxlQUFBO0VBQ0EsV0p2T0c7QUh3WWI7QUN6WUU7RU0rT0U7SUFDRSxrQkFBQTtFUDZKSjtFTzFKRTtJQUNFLG9CQUFBO0lBQUEsb0JBQUE7SUFBQSxhQUFBO0lBQ0EsbUJBQUE7UUFBQSxlQUFBO0lBQ0EsbUJBQUE7UUFBQSxvQkFBQTtZQUFBLFlBQUE7SUFDQSx3QkFBQTtRQUFBLHFCQUFBO1lBQUEsdUJBQUE7SUFDQSxTQUFBO0VQNEpKO0VPMUpJO0lBQ0UsOEJBQUE7UUFBQSxpQkFBQTtJQUNBLGdCQUFBO0VQNEpOO0VPMUpNO0lBQ0UsYUFBQTtFUDRKUjtBQUNGO0FDdFpFO0VNZ1FFO0lBQ0Usb0JBQUE7SUFBQSxvQkFBQTtJQUFBLGFBQUE7SUFDQSx3QkFBQTtRQUFBLHFCQUFBO1lBQUEsdUJBQUE7SUFDQSxTQUFBO0VQeUpKO0VPdkpJO0lBQ0UsOEJBQUE7UUFBQSxpQkFBQTtFUHlKTjtFT3ZKTTtJQUNFLGFBQUE7RVB5SlI7QUFDRjs7QU9oSkE7RUFDRTtJQUNFLGVBQUE7SUFDQSxnRUFBQTtJQUNBLFVBQUE7SUFDQSxXQUFBO0VQbUpGO0VPaEpBO0lBQ0UsZUFBQTtJQUNBLCtEQUFBO0lBQ0EsVUFBQTtJQUNBLFdBQUE7RVBrSkY7RU8vSUE7SUFDRSxlQUFBO0lBQ0EsMkRBQUE7SUFDQSxVQUFBO0lBQ0EsV0FBQTtFUGlKRjtBQUNGOztBT3JLQTtFQUNFO0lBQ0UsZUFBQTtJQUNBLGdFQUFBO0lBQ0EsVUFBQTtJQUNBLFdBQUE7RVBtSkY7RU9oSkE7SUFDRSxlQUFBO0lBQ0EsK0RBQUE7SUFDQSxVQUFBO0lBQ0EsV0FBQTtFUGtKRjtFTy9JQTtJQUNFLGVBQUE7SUFDQSwyREFBQTtJQUNBLFVBQUE7SUFDQSxXQUFBO0VQaUpGO0FBQ0YiLCJmaWxlIjoibWFpbi1ob21lLmNzcyJ9 */
