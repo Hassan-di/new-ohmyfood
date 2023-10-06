@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/main-home.scss:./css/main-home.css",
-    "sass2": "sass --watch ./sass/Pages/main-resturant.scss:./css/main-resturant.css"
+    "sass2": "sass --watch ./sass/Pages/main-resturant.scss:./css/main-resturant.css",
+    "prefix": "postcss ./css/main-resturant.css: ./css/main-home.css --use autoprefixer -d ./css/prefixed/"
   },
   "author": "",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "devDependencies": {
     "sass": "^1.64.1"
   }
