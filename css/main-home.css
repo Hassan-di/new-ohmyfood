@@ -271,6 +271,7 @@ main .container a {
   padding-top: 27px;
   padding-bottom: 27px;
   padding-right: 27px;
+  white-space: nowrap;
 }
 .how-works .container ol li i {
   margin-left: 36px;
@@ -389,12 +390,17 @@ main .container a {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: opacity 2s linear;
+  -webkit-transition: opacity 2s linear;
+  -moz-transition: opacity 2s linear;
+  -ms-transition: opacity 2s linear;
+  -o-transition: opacity 2s linear;
 }
 .restaurants .container .content a.card .info .favorite-heart:hover i.fa-regular {
   display: none;
 }
 .restaurants .container .content a.card .info .favorite-heart:hover i.fa-solid {
   animation: 1s linear forwards graduate-heart;
+  -webkit-animation: 1s linear forwards graduate-heart;
 }
 .restaurants .container .content a.card p {
   margin: 5px 0px;

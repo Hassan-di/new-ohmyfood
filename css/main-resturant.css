@@ -298,6 +298,7 @@ main img {
 .menu .container .content a:hover div.circle::before {
   z-index: 10;
   animation: rotate 1s forwards;
+  -webkit-animation: rotate 1s forwards;
 }
 .menu .container .content a:hover span.descripe {
   text-align: left;
